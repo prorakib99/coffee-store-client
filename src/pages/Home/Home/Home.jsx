@@ -6,6 +6,7 @@ import FeatureIconOne from '../../../assets/images/icons/1.png'
 import FeatureIconTwo from '../../../assets/images/icons/2.png'
 import FeatureIconThree from '../../../assets/images/icons/3.png'
 import FeatureIconFour from '../../../assets/images/icons/4.png'
+import CoffeeCard from '../components/CoffeeCard/CoffeeCard';
 const Home = () => {
     return (
         <>
@@ -61,8 +62,8 @@ const Home = () => {
                             <p className="text-white text-2xl py-1 text-center duration-300 justify-center bg-orange-300 rounded-[5px] border-2 border-stone-800 font-normal hover:bg-transparent hover:text-[#331A15] font-['Rancho'] gap-2 flex items-center"><span>Add Coffee</span> <FaCoffee className='text-[#331A15]' /></p>
                         </Link>
                     </div>
-                    <div className=''>
-                        {}
+                    <div className='grid lg:grid-cols-2 gap-8 mt-16'>
+                        <CoffeeCard></CoffeeCard>
                     </div>
                 </div>
             </div>
