@@ -52,17 +52,21 @@ const Home = () => {
             </div>
 
             {/* Coffee Card Container */}
-            <div className="py-20 w-full h-full relative lg:before:bg-[url('https://i.postimg.cc/2SnqmSw-c/4.png')] before:bg-no-repeat before:w-full before:h-full before:absolute before:left-0 before:top-20 lg:after:bg-[url('https://i.postimg.cc/9fJQFRqp/5.png')] after:bg-right after:bg-no-repeat after:w-full after:h-full after:absolute after:right-0 after:bottom-20">
-                <div className='container mx-auto px-8'>
-                    <div className='mb-4'>
-                        <p className="text-center text-stone-900 text-xl font-normal my-0 font-['Raleway'] leading-relaxed">--- Sip & Savor ---</p>
-                        <h2 className="text-stone-800 text-[55px] mb-2 font-normal text-center font-['Rancho']">Our Popular Products</h2>
-                        <Link to='/addCoffee' className='block mx-auto w-[150px]'>
-                            <p className="text-white text-2xl py-1 text-center duration-300 justify-center bg-orange-300 rounded-[5px] border-2 border-stone-800 font-normal hover:bg-transparent hover:text-[#331A15] font-['Rancho'] gap-2 flex items-center"><span>Add Coffee</span> <FaCoffee className='text-[#331A15]' /></p>
-                        </Link>
-                    </div>
-                    <div className='grid lg:grid-cols-2 gap-8 mt-16'>
-                        <CoffeeCard></CoffeeCard>
+            <div className='relative'>
+                <div className="py-20 lg:before:bg-[url('https://i.postimg.cc/2SnqmSw-c/4.png')] before:bg-no-repeat before:z-[-1] before:w-full before:h-full before:absolute before:left-0 before:top-20 lg:after:bg-[url('https://i.postimg.cc/9fJQFRqp/5.png')] after:bg-right after:bg-no-repeat after:z-[-1] after:w-full after:h-full after:absolute  after:bottom-20">
+                    <div className='container mx-auto px-8'>
+                        <div className='mb-4 grid justify-center'>
+                            <p className="text-center text-stone-900 text-xl font-normal my-0 font-['Raleway'] leading-relaxed">--- Sip & Savor ---</p>
+                            <h2 className="text-stone-800 text-[55px] mb-2 font-normal text-center font-['Rancho']">Our Popular Products</h2>
+                            <Link to='/addCoffee' className='mx-auto'>
+                                <button className="text-white text-2xl py-1 px-3 text-center duration-300 justify-center bg-orange-300 rounded-[5px] border-2 border-stone-800 font-normal hover:bg-transparent hover:text-[#331A15] font-['Rancho'] gap-2 flex items-center">
+                                    <span>Add Coffee</span> <FaCoffee className='text-[#331A15]' />
+                                </button>
+                            </Link>
+                        </div>
+                        <div className='grid lg:grid-cols-2 gap-8 mt-16'>
+                            <CoffeeCard></CoffeeCard>
+                        </div>
                     </div>
                 </div>
             </div>

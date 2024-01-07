@@ -4,7 +4,8 @@ import { MdModeEditOutline, MdDelete } from "react-icons/md";
 const CoffeeCard = () => {
     return (
         <>
-            <div className="grid md:flex justify-center items-center gap-4 lg:gap-8 py-6 lg:py-9 pl-4 lg:pr-16 bg-stone-100 rounded-[10px]">
+        
+            <div className="grid md:flex justify-center items-center gap-4 lg:gap-8 py-6 lg:py-9 pl-4 lg:pr-16 bg-stone-200 bg-opacity-70 rounded-[10px]">
                 <img src='https://i.postimg.cc/cLkzxdL3/1.png' alt="" />
                 <div className="grid gap-3 flex-1">
                     <p className="text-stone-900 text-xl font-semibold font-['Raleway']">Name: <span className="text-zinc-600 font-normal">Americano Coffee</span>
