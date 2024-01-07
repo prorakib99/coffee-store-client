@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import HeroBg from '../../../assets/images/more/3.png'
 import { FaCoffee } from "react-icons/fa";
-import CardBgOne from '../../../assets/images/more/4.png'
 import FeatureIconOne from '../../../assets/images/icons/1.png'
 import FeatureIconTwo from '../../../assets/images/icons/2.png'
 import FeatureIconThree from '../../../assets/images/icons/3.png'
@@ -53,7 +52,7 @@ const Home = () => {
             </div>
 
             {/* Coffee Card Container */}
-            <div className='py-20'>
+            <div className="py-20 w-full h-full relative lg:before:bg-[url('https://i.postimg.cc/2SnqmSw-c/4.png')] before:bg-no-repeat before:w-full before:h-full before:absolute before:left-0 before:top-20 lg:after:bg-[url('https://i.postimg.cc/9fJQFRqp/5.png')] after:bg-right after:bg-no-repeat after:w-full after:h-full after:absolute after:right-0 after:bottom-20">
                 <div className='container mx-auto px-8'>
                     <div className='mb-4'>
                         <p className="text-center text-stone-900 text-xl font-normal my-0 font-['Raleway'] leading-relaxed">--- Sip & Savor ---</p>
