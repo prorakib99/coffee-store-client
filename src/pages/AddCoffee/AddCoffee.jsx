@@ -1,17 +1,12 @@
-import { IoIosReturnLeft } from "react-icons/io";
-import { Link } from "react-router-dom";
+
+import BackButton from "../Shared/BackButton/BackButton";
 
 const AddCoffee = () => {
 
     return (
         <div className="py-11">
             <div className="container mx-auto px-8">
-                <div className="mb-11">
-                    <Link to='/' className="text-gray-700 text-3xl flex items-center gap-4 font-normal font-['Rancho']">
-                        <IoIosReturnLeft />
-                        <span>Back to home</span>
-                    </Link>
-                </div>
+                <BackButton></BackButton>
                 <div className="bg-stone-100 rounded-[5px] py-10 px-12 lg:py-12 lg:pb-14 lg:px-20">
                     <div className="text-center lg:w-3/4 mx-auto">
                         <h2 className="text-gray-700 text-[45px] mb-2 font-normal font-['Rancho']">Add New Coffee</h2>
