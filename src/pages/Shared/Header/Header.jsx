@@ -4,9 +4,9 @@ import logo from '../../../assets/images/more/logo1.png';
 
 const Header = () => {
     return (
-        <div className="container mx-auto px-8">
-            <nav className="bg-stone-100 dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-300 dark:border-gray-600">
-                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <nav className="bg-stone-100 dark:bg-gray-900 w-full z-20 border-b border-gray-300 dark:border-gray-600">
+                <div className="container mx-auto px-8">
+                <div className="flex flex-wrap items-center justify-between mx-auto py-4">
                     <Link to="/" className="flex flex-1 items-center space-x-3 rtl:space-x-reverse">
                         <img src={logo} className="h-12 lg:h-16" alt="Coffee Store Logo" />
                             <span className="self-center text-4xl lg:text-6xl font-normal font-['Rancho'] dark:text-white">Espresso Emporium</span>
@@ -36,9 +36,9 @@ const Header = () => {
                         </ul>
                     </div>
                 </div>
+        </div>
             </nav>
 
-        </div>
     );
 };
 
