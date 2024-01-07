@@ -1,7 +1,49 @@
 
+import toast from "react-hot-toast";
 import BackButton from "../Shared/BackButton/BackButton";
 
 const AddCoffee = () => {
+
+    const handleAddCoffee = event => {
+        event.preventDefault();
+
+        const loading = toast.loading('Creating Coffee');
+        () => loading;
+
+        const form = event.target;
+        const name = form.name.value;
+        const price = form.price.value;
+        const chef = form.chef.value;
+        const supplier = form.supplier.value;
+        const taste = form.taste.value;
+        const category = form.category.value;
+        const details = form.details.value;
+        const photo = form.photo.value;
+
+        const newCoffee = {name, price, chef, supplier, taste, category, details, photo}
+
+        fetch('http://localhost:5000/coffees', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newCoffee)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.acknowledged){
+                toast.dismiss(loading);
+                toast.success('Coffee Add Successful!');
+                form.reset();
+            }
+            else{
+                toast.dismiss(loading);
+                toast.error("Couldn't add Coffee")
+            }
+        })
+
+    }
 
     return (
         <div className="py-11">
@@ -12,7 +54,7 @@ const AddCoffee = () => {
                         <h2 className="text-gray-700 text-[45px] mb-2 font-normal font-['Rancho']">Add New Coffee</h2>
                         <p className="text-center text-stone-900 text-opacity-70 text-lg font-normal font-['Raleway'] leading-[30px]">It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
                     </div>
-                    <form className="grid lg:grid-cols-2 mt-8 gap-8">
+                    <form onSubmit={handleAddCoffee} className="grid lg:grid-cols-2 mt-8 gap-8">
                         <div className="w-full">
                             <label className="text-stone-900 text-opacity-80 text-xl font-semibold font-['Raleway'] leading-[30px]">Name</label>
                             <input type="text" name="name" className="w-full mt-3 border-none focus:border bg-white rounded-[5px]"  placeholder="Enter coffee Name" required />
