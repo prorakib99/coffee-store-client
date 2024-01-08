@@ -1,8 +1,10 @@
-# React + Vite
+# React Chef and Recipe Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/prorakib99/coffee-store-client.svg)](https://github.com/prorakib99/coffee-store-client/stargazers)
+[![GitHub Issues](https://img.shields.io/github/issues/prorakib99/coffee-store-client.svg)](https://github.com/prorakib99/coffee-store-client/issues)
+[![GitHub Forks](https://img.shields.io/github/forks/prorakib99/coffee-store-client.svg)](https://github.com/prorakib99/coffee-store-client/network)
 
-Currently, two official plugins are available:
+## Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Welcome to the React Vite Coffee Store Details project! This React Vite project focuses on providing detailed information about Coffee Stores. Utilizing technologies like Daisy UI, Tailwind CSS, React Hot Toast, and more, it creates an interactive and visually appealing platform for exploring culinary delights.
