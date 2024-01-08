@@ -4,7 +4,7 @@ import BackButton from "../Shared/BackButton/BackButton";
 const ViewCoffee = () => {
     const coffee = useLoaderData()
 
-    const {name, chef, price, supplier, taste, category, details, photo} = coffee
+    const {name, chef, price, supplier, taste, category, details, photo} = coffee;
 
     return (
         <div className="py-10">

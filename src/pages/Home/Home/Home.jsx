@@ -6,8 +6,11 @@ import FeatureIconTwo from '../../../assets/images/icons/2.png'
 import FeatureIconThree from '../../../assets/images/icons/3.png'
 import FeatureIconFour from '../../../assets/images/icons/4.png'
 import CoffeeCard from '../components/CoffeeCard/CoffeeCard';
+import { useState } from 'react';
 const Home = () => {
-    const coffees = useLoaderData()
+
+    const loadedCoffees = useLoaderData();
+    const [coffees, setCoffees] = useState(loadedCoffees)
 
     return (
         <>
@@ -68,7 +71,12 @@ const Home = () => {
                         </div>
                         <div className='grid lg:grid-cols-2 gap-8 mt-16'>
                             {
-                                coffees.map(coffee => <CoffeeCard key={coffee._id} coffee={coffee}></CoffeeCard>)
+                                coffees.map(coffee => <CoffeeCard 
+                                    key={coffee._id} 
+                                    coffee={coffee}
+                                    setCoffees={setCoffees}
+                                    coffees={coffees}
+                                    ></CoffeeCard>)
                             }
                         </div>
                     </div>

@@ -1,15 +1,51 @@
 import { FaEye } from "react-icons/fa";
 import { MdModeEditOutline, MdDelete } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { confirmAlert } from "react-confirm-alert";
+import "react-confirm-alert/src/react-confirm-alert.css";
 
-const CoffeeCard = ({ coffee }) => {
-    
+const CoffeeCard = ({ coffee, setCoffees, coffees }) => {
+
     const { _id, name, price, chef, photo } = coffee;
+
+    const submitDelete = id => {
+        confirmAlert({
+            title: 'Are you sure?',
+            message: 'Are you sure that you want to delete it?',
+            buttons: [
+                {
+                    label: 'Yes',
+                    onClick: () => handleDelete(id)
+                },
+                {
+                    label: 'No'
+                }
+            ]
+        });
+    };
+
+    const handleDelete = _id => {
+
+        const remaining = coffees.filter(cof => cof._id !== _id);
+
+        fetch(`http://localhost:5000/coffees/${_id}`, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount > 0) {
+                    toast.success("Coffee Delete Successfully!")
+                    setCoffees(remaining);
+                }
+            })
+    }
 
     return (
         <>
-
             <div className="grid md:flex justify-center items-center gap-4 lg:gap-8 py-6 lg:py-9 lg:px-10 bg-stone-200 bg-opacity-70 rounded-[10px]">
+                <ToastContainer />
                 <div className="lg:w-1/3">
                     <img className="mx-auto" src={photo} alt="" />
                 </div>
@@ -32,7 +68,7 @@ const CoffeeCard = ({ coffee }) => {
                             <MdModeEditOutline className="text-2xl" />
                         </button>
                     </Link>
-                    <button className="bg-red-500 rounded-[5px] text-white p-2">
+                    <button onClick={() => submitDelete(_id)} className="bg-red-500 rounded-[5px] text-white p-2">
                         <MdDelete className="text-2xl" />
                     </button>
                 </div>
