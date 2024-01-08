@@ -5,12 +5,21 @@
 @tailwind components;
 @tailwind utilities;
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Rancho', cursive;
 }
 
-body{
+body {
   font-family: 'Raleway', sans-serif;
+}
+
+.text-shadow {
+  text-shadow: 0 2px 3px #331A15;
 }
 
 .popup-overlay {
@@ -22,7 +31,7 @@ body{
 }
 
 .react-confirm-alert-body {
-  text-align: center;
+  text-align: center !important;
 }
 
 .react-confirm-alert-body h1 {
@@ -31,13 +40,13 @@ body{
 }
 
 .react-confirm-alert-button-group {
-  justify-content: flex-end;
+  justify-content: flex-end !important;
 }
 
 .react-confirm-alert-button-group button {
   font-size: 16px;
 }
 
-.react-confirm-alert-button-group button:first-child{
+.react-confirm-alert-button-group button:first-child {
   background: rgb(240, 82, 82, 1)
 }

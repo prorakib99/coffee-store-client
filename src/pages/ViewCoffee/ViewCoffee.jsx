@@ -13,7 +13,7 @@ const ViewCoffee = () => {
                 <div className="bg-stone-100 px-10 lg:px-20 py-12 grid lg:grid-cols-2 justify-center gap-8 lg:gap-16 items-center rounded-[5px] w-full">
                     <img className="mx-auto lg:w-1/2 h-full" src={photo} alt="" />
                     <div>
-                        <h3 className="text-stone-800 text-4xl mb-5 font-normal font-['Rancho']">{name}</h3>
+                        <h3 className="text-stone-800 text-4xl mb-5 font-normal text-shadow font-['Rancho']">{name}</h3>
                         <div className="grid gap-3 flex-1">
                             <p className="text-stone-900 text-xl font-semibold font-['Raleway']">Price: <span className="text-zinc-600 font-normal">{price} Taka</span>
                             </p>

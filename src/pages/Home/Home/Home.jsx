@@ -18,7 +18,7 @@ const Home = () => {
             <div style={{ backgroundImage: `url(${HeroBg})` }} className='bg-cover bg-center'>
                 <div className="container mx-auto px-8">
                     <div className='py-16 lg:py-48 flex lg:w-1/2 mx-auto justify-center flex-col text-center items-center'>
-                        <h1 className="text-white text-5xl lg:text-[55px] font-normal font-['Rancho']">Would you like a Cup of Delicious Coffee?</h1>
+                        <h1 className="text-white text-5xl text-shadow lg:text-[55px] font-normal font-['Rancho']">Would you like a Cup of Delicious Coffee?</h1>
                         <p className="text-white text-base font-normal mt-4 mb-8 font-['Raleway'] leading-[30px]">Its coffee time - Sip & Savor - Relaxation in every sip! Get the nostalgia back!! Your companion of every moment!!! Enjoy the beautiful moments and make them memorable.</p>
 
                         <Link to='/addCoffee' className="px-5 py-1 duration-300 border-2 border-transparent hover:text-white hover:border-white hover:bg-transparent bg-orange-300 text-neutral-800 text-2xl font-normal font-['Rancho']">Add Coffee </Link>
@@ -62,7 +62,7 @@ const Home = () => {
                     <div className='container mx-auto px-8'>
                         <div className='mb-4 grid justify-center'>
                             <p className="text-center text-stone-900 text-xl font-normal my-0 font-['Raleway'] leading-relaxed">--- Sip & Savor ---</p>
-                            <h2 className="text-stone-800 text-[55px] mb-2 font-normal text-center font-['Rancho']">Our Popular Products</h2>
+                            <h2 className="text-stone-800 text-[55px] text-shadow mb-2 font-normal text-center font-['Rancho']">Our Popular Products</h2>
                             <Link to='/addCoffee' className='mx-auto'>
                                 <button className="text-white text-2xl py-1 px-3 text-center duration-300 justify-center bg-orange-300 rounded-[5px] border-2 border-stone-800 font-normal hover:bg-transparent hover:text-[#331A15] font-['Rancho'] gap-2 flex items-center">
                                     <span>Add Coffee</span> <FaCoffee className='text-[#331A15]' />

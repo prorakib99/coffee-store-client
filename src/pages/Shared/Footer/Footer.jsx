@@ -17,7 +17,7 @@ const Footer = () => {
                     </Link>
                     <div className='lg:grid lg:grid-cols-[7fr_5fr] flex flex-col-reverse gap-10 justify-between'>
                         <div>
-                            <h3 className="text-stone-800 text-[45px] font-normal font-['Rancho']">Espresso Emporium</h3>
+                            <h3 className="text-stone-800 text-[45px] text-shadow font-normal font-['Rancho']">Espresso Emporium</h3>
                             <p className="text-stone-900 text-xl font-normal font-['Raleway'] leading-9">Always ready to be your friend. Come & Contact with us to share your memorable moments, to share with your best companion.</p>
                             <div className="mt-8 mb-6">
                                 <ul className='flex gap-4'>
@@ -27,7 +27,7 @@ const Footer = () => {
                                     <li><Link to='/'><FaLinkedin className='text-2xl text-[#331A15]' /></Link></li>
                                 </ul>
                             </div>
-                            <p className="text-stone-800 text-[45px]  drop-shadow-2xl font-normal font-['Rancho']">Get in Touch</p>
+                            <p className="text-stone-800 text-[45px] text-shadow drop-shadow-2xl font-normal font-['Rancho']">Get in Touch</p>
                             <div className=''>
                                 <p className="text-stone-900 flex gap-4 items-center text-xl font-normal font-['Raleway'] leading-9"><BsTelephoneFill /> <span>+88 01500 000 000</span></p>
                                 <p className="text-stone-900 flex gap-4 items-center text-xl font-normal font-['Raleway'] leading-9"><MdEmail /> <span>info@gmail.com</span></p>
@@ -35,7 +35,7 @@ const Footer = () => {
                             </div>
                         </div>
                         <div>
-                            <h3 className="text-stone-800 text-[45px] font-normal font-['Rancho']">Connect with Us</h3>
+                            <h3 className="text-stone-800 text-[45px] text-shadow font-normal font-['Rancho']">Connect with Us</h3>
                             <form>
                                 <input type='text' name='name' className="w-full h-12 mb-4 bg-white rounded-[5px] focus:border border-gray-300 focus:outline-none focus:border-orange-300" placeholder='Name' />
                                 <input type='email' name='email' className="w-full h-12 mb-4 bg-white rounded-[5px] focus:border border-gray-300 focus:outline-none focus:border-orange-300" placeholder='Email' />

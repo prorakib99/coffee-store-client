@@ -51,7 +51,7 @@ const AddCoffee = () => {
                 <BackButton></BackButton>
                 <div className="bg-stone-100 rounded-[5px] py-10 px-12 lg:py-12 lg:pb-14 lg:px-20">
                     <div className="text-center lg:w-3/4 mx-auto">
-                        <h2 className="text-gray-700 text-[45px] mb-2 font-normal font-['Rancho']">Add New Coffee</h2>
+                        <h2 className="text-gray-700 text-[45px] mb-2 font-normal text-shadow font-['Rancho']">Add New Coffee</h2>
                         <p className="text-center text-stone-900 text-opacity-70 text-lg font-normal font-['Raleway'] leading-[30px]">It is a long established fact that a reader will be distraceted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here.</p>
                     </div>
                     <form onSubmit={handleAddCoffee} className="grid lg:grid-cols-2 mt-8 gap-8">

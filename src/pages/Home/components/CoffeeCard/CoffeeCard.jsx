@@ -11,6 +11,7 @@ const CoffeeCard = ({ coffee, setCoffees, coffees }) => {
     const { _id, name, price, chef, photo } = coffee;
 
     const submitDelete = id => {
+
         confirmAlert({
             title: 'Are you sure?',
             message: 'Are you sure that you want to delete it?',
@@ -30,16 +31,22 @@ const CoffeeCard = ({ coffee, setCoffees, coffees }) => {
 
         const remaining = coffees.filter(cof => cof._id !== _id);
 
-        fetch(`http://localhost:5000/coffees/${_id}`, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount > 0) {
-                    toast.success("Coffee Delete Successfully!")
-                    setCoffees(remaining);
-                }
+        if (remaining.length !== 0) {
+            fetch(`http://localhost:5000/coffees/${_id}`, {
+                method: 'DELETE'
             })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        toast.success("Coffee Delete Successfully!")
+                        setCoffees(remaining);
+                    }
+                })
+        }
+        else {
+            return toast.error("You can't Delete the last one")
+        }
+
     }
 
     return (
