@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import HeroBg from '../../../assets/images/more/3.png'
 import { FaCoffee } from "react-icons/fa";
 import FeatureIconOne from '../../../assets/images/icons/1.png'
@@ -7,6 +7,8 @@ import FeatureIconThree from '../../../assets/images/icons/3.png'
 import FeatureIconFour from '../../../assets/images/icons/4.png'
 import CoffeeCard from '../components/CoffeeCard/CoffeeCard';
 const Home = () => {
+    const coffees = useLoaderData()
+
     return (
         <>
             {/* Hero Section */}
@@ -65,7 +67,9 @@ const Home = () => {
                             </Link>
                         </div>
                         <div className='grid lg:grid-cols-2 gap-8 mt-16'>
-                            <CoffeeCard></CoffeeCard>
+                            {
+                                coffees.map(coffee => <CoffeeCard key={coffee._id} coffee={coffee}></CoffeeCard>)
+                            }
                         </div>
                     </div>
                 </div>
