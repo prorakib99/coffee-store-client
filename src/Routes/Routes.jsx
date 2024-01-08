@@ -24,12 +24,14 @@ const router = createBrowserRouter([
                 element: <AddCoffee></AddCoffee>
             },
             {
-                path: 'coffeeDetails',
-                element: <ViewCoffee></ViewCoffee>
+                path: 'coffeeDetails/:id',
+                element: <ViewCoffee></ViewCoffee>,
+                loader: ({params}) => fetch(`http://localhost:5000/coffees/${params.id}`)
             },
             {
                 path: 'updateCoffee/:id',
-                element: <EditCoffee></EditCoffee>
+                element: <EditCoffee></EditCoffee>,
+                loader: ({params}) => fetch(`http://localhost:5000/coffees/${params.id}`)
             },
             {
                 path: 'login',
