@@ -33,7 +33,7 @@ const EditCoffee = () => {
             buttons: [
                 {
                     label: 'Yes',
-                    onClick: () => fetch(`http://localhost:5000/coffees/${_id}`, {
+                    onClick: () => fetch(`https://coffee-store-server-five-olive.vercel.app/coffees/${_id}`, {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json'

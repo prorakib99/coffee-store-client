@@ -17,7 +17,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/coffees')
+                loader: () => fetch('https://coffee-store-server-five-olive.vercel.app/coffees')
             },
             {
                 path: 'addCoffee',
@@ -26,12 +26,12 @@ const router = createBrowserRouter([
             {
                 path: 'coffeeDetails/:id',
                 element: <ViewCoffee></ViewCoffee>,
-                loader: ({params}) => fetch(`http://localhost:5000/coffees/${params.id}`)
+                loader: ({params}) => fetch(`https://coffee-store-server-five-olive.vercel.app/coffees/${params.id}`)
             },
             {
                 path: 'updateCoffee/:id',
                 element: <EditCoffee></EditCoffee>,
-                loader: ({params}) => fetch(`http://localhost:5000/coffees/${params.id}`)
+                loader: ({params}) => fetch(`https://coffee-store-server-five-olive.vercel.app/coffees/${params.id}`)
             },
             {
                 path: 'login',

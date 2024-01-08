@@ -32,7 +32,7 @@ const CoffeeCard = ({ coffee, setCoffees, coffees }) => {
         const remaining = coffees.filter(cof => cof._id !== _id);
 
         if (remaining.length !== 0) {
-            fetch(`http://localhost:5000/coffees/${_id}`, {
+            fetch(`https://coffee-store-server-five-olive.vercel.app/coffees/${_id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
